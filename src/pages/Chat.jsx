@@ -58,7 +58,10 @@ const Chat = () => {
                             ? (
                                 <Welcome currentUser={currentUser} />
                             ) : (
-                                <ChatContainer currentChat={currentChat} />
+                                <ChatContainer
+                                    currentChat={currentChat}
+                                    currentUser={currentUser}
+                                />
                             )}
                 </div>
             </Container>
@@ -74,11 +77,11 @@ flex-direction : column;
 justify-content : center;
 gap: 16px;
 align-items: center;
-background-color : #FFFFFF;
+background-color : #30A3E6;
     .container {
         height: 85vh;
         width: 85vw;
-        background-color : #179CDE;
+        background-color : #F0EDE5;
         display: grid;
         grid-template-columns: 25% 75%;
         @media screen and (min-width: 720px) and (max-width: 1080px) {

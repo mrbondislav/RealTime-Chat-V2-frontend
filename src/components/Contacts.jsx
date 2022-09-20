@@ -65,14 +65,14 @@ const Cotainer = styled.div`
     display: grid;
     grid-template-rows: 10% 75% 15%;
     overflow: hidden;
-    background-color: #0088CC;
+    background-color: #C0AB8E;
     .brand {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 16px;
         img {
-            height: 32px;
+            height: 42px;
         }
         h3 {
             color: white;
@@ -117,12 +117,12 @@ const Cotainer = styled.div`
         }
 
         .selected {
-            background-color: blue;
+            background-color: #2E4A62;
         }
     }
 
     .current-user {
-        background-color: #8C8C8C;
+        background-color: #C48F65;
         display: flex;
         justify-content: center;
         align-items: center;

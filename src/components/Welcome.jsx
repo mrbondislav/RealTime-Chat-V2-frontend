@@ -19,12 +19,12 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
-color: white;
+color: black;
 img {
     height: 320px;
 }
 span {
-    color: black;
+    color: #2E4A62;
 }
 `;
 
