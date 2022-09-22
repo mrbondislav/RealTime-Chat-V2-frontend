@@ -60,6 +60,11 @@ background-color: #C48F65;
 padding: 0 32px;
 padding-bottom: 4px;
 
+@media screen and (min-width: 720px) and (max-width: 1080px) {
+     padding: 0px 16px;
+        gap: 16px;
+    }
+
  .button-container {
     display: flex;
     align-items: center;
@@ -136,6 +141,13 @@ padding-bottom: 4px;
         background-color: #531d2a;
         border: none;
         cursor: pointer;
+
+        @media screen and (min-width: 720px) and (max-width: 1080px) {
+            padding: 5px 16px;
+            svg {
+                font-size: 16px;
+            }
+    }
 
         svg {
             color: #ebe7ff;

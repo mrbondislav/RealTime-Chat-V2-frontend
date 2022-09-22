@@ -44,7 +44,7 @@ const SetAvatar = () => {
                 localStorage.setItem("chat-app-user", JSON.stringify(user));
                 navigate('/');
             } else {
-                toast.error("Error setting avatar. Please try again", toastOptions);
+                toast.success("Сonfirm your choice or reload the page", toastOptions);
             }
         }
     };

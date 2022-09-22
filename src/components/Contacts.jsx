@@ -6,16 +6,32 @@ const Contacts = ({ contacts, currentUser, changeChat }) => {
     const [currentUserImage, setCurrentUserImage] = React.useState(undefined);
     const [currentSelected, setCurrentSelected] = React.useState(undefined);
 
+    // React.useEffect(() => {
+    //     if (currentUser) {
+    //         setCurrentUserImage(currentUser.avatarImage);
+    //         setCurrentUserName(currentUser.username);
+    //     }
+    // }, [currentUser]);
+
     React.useEffect(() => {
-        if (currentUser) {
-            setCurrentUserImage(currentUser.avatarImage);
-            setCurrentUserName(currentUser.username);
-        }
-    }, [currentUser]);
+        const fetchData = async () => {
+            const data = await JSON.parse(
+                localStorage.getItem("chat-app-user")
+            );
+            setCurrentUserName(data.username);
+            setCurrentUserImage(data.avatarImage);
+        };
+        fetchData();
+    }, []);
+
+
+
     const changeCurrentChat = (index, contact) => {
         setCurrentSelected(index);
         changeChat(contact);
     };
+
+
     return (
         <>
             {
