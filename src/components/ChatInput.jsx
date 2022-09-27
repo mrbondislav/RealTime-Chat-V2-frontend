@@ -60,6 +60,11 @@ background-color: #C48F65;
 padding: 0 32px;
 padding-bottom: 4px;
 
+@media screen and (min-width: 350px) and (max-width: 450px) {
+    padding: 0px 8px;
+        gap: 8px;
+}
+
 @media screen and (min-width: 720px) and (max-width: 1080px) {
      padding: 0px 16px;
         gap: 16px;
@@ -72,11 +77,15 @@ padding-bottom: 4px;
     gap: 16px;
     
     .emoji {
+        
         position: relative;
         svg {
             font-size: 24px;
             color: yellow;
             cursor: pointer;
+            @media screen and (min-width: 350px) and (max-width: 450px) {
+                font-size: 16px;
+            }
         }
         .emoji-picker-react {
             position: absolute;
@@ -84,6 +93,10 @@ padding-bottom: 4px;
             background-color: #F0EDE5;
             box-shadow: 0 5px 10px #dad5c9;
             border-color: #F0EDE5;
+            @media screen and (min-width: 350px) and (max-width: 450px) {
+                width: 230px;
+                height: 300px;
+            }
 
             .emoji-scroll-wrapper::-webkit-scrollbar {
                 background-color: #F0EDE5;
@@ -118,6 +131,10 @@ padding-bottom: 4px;
     align-content: center;
     gap: 32px;
     background-color: #672E3B;
+    @media screen and (min-width: 350px) and (max-width: 450px) {
+        gap: 0px;
+}
+    
     input {
         width: 90%;
         background-color: transparent;
@@ -131,6 +148,9 @@ padding-bottom: 4px;
         &:focus {
             outline: none;
         }
+        @media screen and (min-width: 350px) and (max-width: 450px) {
+        font-size: 12px;
+}
     }
     button {
         padding: 5px 32px;
@@ -141,6 +161,7 @@ padding-bottom: 4px;
         background-color: #531d2a;
         border: none;
         cursor: pointer;
+        
 
         @media screen and (min-width: 720px) and (max-width: 1080px) {
             padding: 5px 16px;
@@ -148,6 +169,10 @@ padding-bottom: 4px;
                 font-size: 16px;
             }
     }
+
+    @media screen and (min-width: 350px) and (max-width: 450px) {
+            padding: 5px 10px;
+}
 
         svg {
             color: #ebe7ff;

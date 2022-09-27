@@ -86,7 +86,7 @@ function ChatContainer({ currentChat, socket }) {
         <>
             {
                 currentChat && (
-                    <Container>
+                    <Container  >
                         <div className="chat-header">
                             <div className="user-details">
                                 <div className="avatar">
@@ -133,11 +133,14 @@ const Container = styled.div`
     @media screen and (min-width: 720px) and (max-width: 1080px) {
         grid-auto-rows: 15% 75% 15%;
     }
+
+    
     .chat-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 32px;
+        border-bottom: 1px solid #ddd7c6;
         .user-details {
             display: flex;
             align-items: center;
@@ -161,6 +164,9 @@ const Container = styled.div`
         flex-direction: column;
         gap: 16px;
         overflow: auto;
+        @media screen and (min-width: 350px) and (max-width: 450px) {
+            padding: 4px 8px;
+    }
         &::-webkit-scrollbar {
             width: 3px;
             &-thumb {
@@ -171,6 +177,7 @@ const Container = styled.div`
         }
         
         .message {
+            
             display: flex;
             align-items: center;
             .content {
@@ -180,6 +187,11 @@ const Container = styled.div`
                 font-size: 18px;
                 border-radius: 16px;
                 color: #ebe7ff;
+                @media screen and (min-width: 350px) and (max-width: 450px) {
+                    max-width: 50%;
+                    font-size: 12px;
+                    padding: 10px;
+                }
             }
         }
     }

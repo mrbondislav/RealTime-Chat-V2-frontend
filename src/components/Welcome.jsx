@@ -20,8 +20,20 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 color: black;
+@media screen and (min-width: 350px) and (max-width: 450px) {
+        h1 {
+            text-align: center;
+        }
+        h3 {
+            text-align: center;
+        }
+}
+
 img {
     height: 320px;
+    @media screen and (min-width: 350px) and (max-width: 450px) {
+        height: 250px;
+}
 }
 span {
     color: #2E4A62;

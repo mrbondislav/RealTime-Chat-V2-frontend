@@ -1,17 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 import Logo from "../assets/logo.svg";
-const Contacts = ({ contacts, currentUser, changeChat }) => {
+const Contacts = ({ contacts, changeChat }) => {
     const [currentUserName, setCurrentUserName] = React.useState(undefined);
     const [currentUserImage, setCurrentUserImage] = React.useState(undefined);
     const [currentSelected, setCurrentSelected] = React.useState(undefined);
-
-    // React.useEffect(() => {
-    //     if (currentUser) {
-    //         setCurrentUserImage(currentUser.avatarImage);
-    //         setCurrentUserName(currentUser.username);
-    //     }
-    // }, [currentUser]);
 
     React.useEffect(() => {
         const fetchData = async () => {
@@ -82,11 +75,26 @@ const Cotainer = styled.div`
     grid-template-rows: 10% 75% 15%;
     overflow: hidden;
     background-color: #C0AB8E;
+    @media screen and (min-width: 350px) and (max-width: 450px) {
+        grid-template-rows: 10% 80% 10%;
+        .brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            h3 {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+    }
+    
     .brand {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 16px;
+                
         img {
             height: 42px;
         }
@@ -101,6 +109,7 @@ const Cotainer = styled.div`
         align-items: center;
         overflow: auto;
         gap: 12px; 
+        margin-top: 8px;
         &::-webkit-scrollbar{
             width: 3px;
             &-thumb {
@@ -120,9 +129,18 @@ const Cotainer = styled.div`
             align-items: center;
             display: flex;
             transition: 0.5s ease-in-out;
+            @media screen and (min-width: 350px) and (max-width: 450px) {
+                gap: 8px;
+                min-height: 70px;
+
+            }
+            
             .avatar {
                 img {
                     height: 48px;
+                    @media screen and (min-width: 350px) and (max-width: 450px) {
+                        height: 38px;
+                        }
                 }
             }
             .username {
@@ -143,10 +161,22 @@ const Cotainer = styled.div`
         justify-content: center;
         align-items: center;
         gap: 32px;
+        @media screen and (min-width: 350px) and (max-width: 450px) {
+            gap: 5px;
+
+            .user-name {
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
         .avatar {
             img {
             height: 64px;
             max-inline-size: 100%;
+            @media screen and (min-width: 350px) and (max-width: 450px) {
+                height: 36px;
+            }
          }
         }
         .user-name {
@@ -154,6 +184,7 @@ const Cotainer = styled.div`
                 color : white;
             }
         }
+        
         @media screen and (min-width: 720px) and (max-width: 1080px) {
             gap: 8px;
             .user-name {

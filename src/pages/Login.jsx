@@ -104,6 +104,11 @@ const FormContainer = styled.div`
     align-items: center;
     background-color : #179CDE;
 
+    @media screen and (min-width: 350px) and (max-width: 450px) {
+        
+        
+    }
+
     .brand {
         display: flex;
         align-items: center;

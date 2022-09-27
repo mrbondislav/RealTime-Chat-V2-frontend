@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from "styled-components";
-import loader from "../assets/loader.gif";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css'
 import axios from "axios";
 import { setAvatarRoute } from '../utils/APIRoutes';
 import { Buffer } from "buffer";
+import Skeleton from '../components/setAvatarSkeleton';
 
 const SetAvatar = () => {
 
@@ -72,9 +72,11 @@ const SetAvatar = () => {
         <>
             {
                 isLoading ? <Container>
-                    <img src={loader} alt="loader" className='loader' />
+                    <Skeleton className="loader" />
                 </Container> : (
+
                     <Container>
+
                         <div className="title-container">
                             <h1>
                                 Pick an avatar as yuor profile picture
@@ -123,13 +125,18 @@ const Container = styled.div`
     align-items: center;
     background-color : #179CDE;
     height : 100vh;
-    width: 100 vw;
+    width: 100vw;
     
     .loader {
         max-inline-size: 100%;
     }
 
     .title-container {
+        @media screen and (min-width: 350px) and (max-width: 450px) {
+            h1 {
+                text-align: center;
+            }
+        }
         h1 {
             color: white;
         }
@@ -138,6 +145,10 @@ const Container = styled.div`
     .avatars {
         display: flex;
         gap: 32px;
+        @media screen and (min-width: 350px) and (max-width: 450px) {
+            gap: 0px;
+        }
+        
         .avatar {
             border : 6px solid transparent;
             padding: 6px;
@@ -146,9 +157,14 @@ const Container = styled.div`
             justify-content : center;
             align-items: center;
             transition : 0.5 ease-in-out;
+        }
+            
             img {
                 height: 96px;
+                @media screen and (min-width: 350px) and (max-width: 450px) {
+                    height: 64px;
             }
+            
         }
         .selected {
             border : 6px solid #FFFFFF;
