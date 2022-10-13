@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import Robot from "../assets/robot.gif";
+import Logout from '../components/Logout';
 const Welcome = ({ currentUser }) => {
 
     return (
@@ -10,6 +11,7 @@ const Welcome = ({ currentUser }) => {
                 Welcome, <span>{currentUser.username}</span>
             </h1>
             <h3>Please select a chat to Start Messaging</h3>
+            <Logout />
         </Container>
     )
 }
